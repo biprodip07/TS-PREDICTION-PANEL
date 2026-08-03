@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="row g-4 fade-in">
+    <!-- Top Section: Period, Timer, Prediction -->
+    <div class="col-12 col-md-4">
+        <div class="card p-3 text-center neon-border h-100">
+            <h5 class="text-muted mb-2">Current Period</h5>
+            <h3 class="neon-text fw-bold" id="currentPeriod">Loading...</h3>
+        </div>
+    </div>
+    
+    <div class="col-12 col-md-4">
+        <div class="card p-3 text-center neon-border h-100">
+            <h5 class="text-muted mb-2">Time Remaining</h5>
+            <h2 class="text-danger fw-bold" id="timer">00:00</h2>
+        </div>
+    </div>
+
+    <div class="col-12 col-md-4">
+        <div class="card p-3 neon-border h-100">
+            <h5 class="text-muted mb-2 border-bottom border-secondary pb-2">Analysis Panel</h5>
+            <p class="small text-secondary mb-0">
+                <em>* This hack panel 98% -provided sureshot analysis. 
+                The system predict under 2 level guarantee outcomes.</em>
+            </p>
+            <div class="mt-auto pt-3">
+                <span class="badge bg-secondary">System Ready</span>
+                <span class="badge border border-success text-success">Awaiting Input</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Stats Cards -->
+    <div class="col-12 col-md-4">
+        <div class="card p-3 bg-dark">
+            <h6 class="text-muted">Total History</h6>
+            <h3 id="totalHistory">0</h3>
+        </div>
+    </div>
+    <div class="col-12 col-md-4">
+        <div class="card p-3 bg-dark">
+            <h6 class="text-muted">Simulated Wins</h6>
+            <h3 class="neon-text" id="totalWin">0</h3>
+        </div>
+    </div>
+    <div class="col-12 col-md-4">
+        <div class="card p-3 bg-dark">
+            <h6 class="text-muted">Simulated Losses</h6>
+            <h3 class="text-danger" id="totalLoss">0</h3>
+        </div>
+    </div>
+
+    <!-- Data Table -->
+    <div class="col-12">
+        <div class="card p-3 neon-border">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h5 class="m-0">Period History</h5>
+                <input type="text" id="searchInput" class="form-control w-25 bg-dark text-light border-secondary" placeholder="Search Period...">
+            </div>
+            <div class="table-responsive">
+                <table class="table table-dark table-hover mb-0">
+                    <thead>
+                        <tr>
+                            <th>Period</th>
+                            <th class="text-center">Number</th>
+                            <th>Size</th>
+                            <th>Color</th>
+                            <th>Time</th>
+                        </tr>
+                    </thead>
+                    <tbody id="historyBody">
+                        <!-- JS injects data here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
