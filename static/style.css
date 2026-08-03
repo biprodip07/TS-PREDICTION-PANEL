@@ -1,0 +1,78 @@
+:root {
+    --bg-dark: #0d1117;
+    --card-bg: #161b22;
+    --neon-green: #39ff14;
+    --text-main: #e6edf3;
+    --text-muted: #8b949e;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.neon-text {
+    color: var(--neon-green);
+    text-shadow: 0 0 5px var(--neon-green);
+}
+
+.neon-border {
+    border: 1px solid var(--neon-green);
+    box-shadow: 0 0 10px rgba(57, 255, 20, 0.2);
+    background-color: var(--card-bg);
+    border-radius: 10px;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid #30363d;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--neon-green);
+}
+
+.table {
+    color: var(--text-main);
+}
+
+.table-dark {
+    background-color: var(--card-bg);
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(57, 255, 20, 0.1);
+    color: var(--neon-green);
+}
+
+.btn-neon {
+    background: transparent;
+    color: var(--neon-green);
+    border: 1px solid var(--neon-green);
+    transition: all 0.3s;
+}
+
+.btn-neon:hover {
+    background: var(--neon-green);
+    color: var(--bg-dark);
+    box-shadow: 0 0 15px var(--neon-green);
+}
+
+.fade-in {
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Custom Chart.js Container */
+.chart-container {
+    position: relative;
+    height: 300px;
+    width: 100%;
+}
